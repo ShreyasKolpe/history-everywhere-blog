@@ -1,0 +1,20 @@
+{% extends 'base_template.html' %}
+{% load static %}
+<html lang="en">
+
+    {% block content %}
+    <div class="container text-dark-on-light justify-content-lg-center col-lg-8">
+        <div class="row ">
+            <h1>{{title}}</h1>
+            <h3>{{subtitle}}</h3>
+        </div>
+
+        <div class="row">
+            <h6>By {{author}}. Published on {{pub_date}}</h6>
+            {{content|safe}}
+            <h6><em>Last modified on {{last_modified_date}}</em></h6>
+        </div>
+    </div>
+    {% endblock %}
+
+</html>

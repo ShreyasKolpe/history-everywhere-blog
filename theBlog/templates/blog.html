@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base_template.html' %}
+<html lang="en">
+
+    {% block content %}
+    <div class="container-fluid text-dark-on-light">
+
+
+        <h1>The History Everywhere Blog</h1>
+        <h5>My writings on history, language, technology and anything that interests me.
+        <br/>
+        Blogging aims to be a public journal or snapshot of my cluttered desktop.
+        </h5>
+
+
+        <div class="row g-0 row-cols-lg-4">
+            {% for post in blog_posts %}
+            <div class="card shadow m-3">
+                <img src={{post.card_image_url}} class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title">{{post.title}}</h4>
+                    <h6 class="card-subtitle">{{post.subtitle|safe}}</h6>
+                    <p class="card-text"><br/>
+                    <a href={{post.hyperlink}} class="text-dark-on-light">Read more</a></p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+
+</html>
