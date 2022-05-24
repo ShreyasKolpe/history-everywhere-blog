@@ -3,3 +3,4 @@ venv/
 .idea/
 **/migrations/
 **/_pycache__/
+**/settings.py
