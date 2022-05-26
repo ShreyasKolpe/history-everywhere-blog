@@ -1,7 +1,9 @@
 from django.contrib import admin
-from blog import models
+from blog.models import BlogPost
 
 # Register your models here.
+class BlogAdmin(admin.ModelAdmin):
+    class Media:
+        js = ('js/blog.js', )
 
-
-admin.site.register(models.BlogPost)
+admin.site.register(BlogPost, BlogAdmin)
