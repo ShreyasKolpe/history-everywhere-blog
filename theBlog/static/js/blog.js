@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     sc.onload = ()=> {
         tinymce.init({
             selector: '#id_content',
+            plugins: 'link'
         })
     }
 
