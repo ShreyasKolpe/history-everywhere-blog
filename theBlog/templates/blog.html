@@ -20,7 +20,9 @@
         <div class="row g-0 row-cols-lg-4" data-masonry='{"percentPosition": true }'>
             {% for post in blog_posts %}
             <div class="card shadow m-3">
+                {% if post.card_image_url %}
                 <img src={{post.card_image_url}} class="card-img-top">
+                {% endif %}
                 <div class="card-body">
                     <h4 class="card-title">{{post.title}}</h4>
                     <h6 class="card-subtitle">{{post.subtitle|safe}}</h6>
